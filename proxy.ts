@@ -11,9 +11,16 @@ export function proxy(request: NextRequest) {
         )
     }
 
-    else if (url.pathname.endsWith("/unix")){
+
+    else if (url.pathname.endsWith("/macos")){
         return NextResponse.redirect(
-            new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/refs/heads/main/src/Installers/UnixLike/install.sh', request.url)
+            new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/refs/heads/main/src/Installers/MacOS/install.sh', request.url)
+        )
+    }
+
+    else if (url.pathname.endsWith("/linux")){
+        return NextResponse.redirect(
+            new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/refs/heads/main/src/Installers/Linux/install.sh', request.url)
         )
     }
     
