@@ -18,6 +18,12 @@ export function proxy(request: NextRequest) {
         )
     }
 
+    else if (url.pathname.endsWith("/macos-bundle")){
+        return NextResponse.redirect(
+            new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/refs/heads/macos-bundle/src/Installers/MacOS/install.sh', request.url)
+        )
+    }
+
     else if (url.pathname.endsWith("/linux")){
         return NextResponse.redirect(
             new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/refs/heads/main/src/Installers/Linux/install.sh', request.url)
