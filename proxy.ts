@@ -7,14 +7,14 @@ export function proxy(request: NextRequest) {
     
     if (url.pathname.endsWith("/windows")){
         return NextResponse.redirect(
-            new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/main/src/Installers/Windows/install.ps1', request.url)
+            new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/stable/src/Installers/Windows/install.ps1', request.url)
         )
     }
 
 
     else if (url.pathname.endsWith("/macos")){
         return NextResponse.redirect(
-            new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/refs/heads/main/src/Installers/MacOS/install.sh', request.url)
+            new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/refs/heads/stable/src/Installers/MacOS/install.sh', request.url)
         )
     }
 
@@ -24,15 +24,15 @@ export function proxy(request: NextRequest) {
         )
     }
 
-    else if (url.pathname.endsWith("/macos-silicon")){
-        return NextResponse.redirect(
-            new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/refs/heads/macos-silicon/src/Installers/MacOS/install.sh', request.url)
-        )
-    }
+    // else if (url.pathname.endsWith("/macos-silicon")){
+    //     return NextResponse.redirect(
+    //         new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/refs/heads/macos-silicon/src/Installers/MacOS/install.sh', request.url)
+    //     )
+    // }
 
     else if (url.pathname.endsWith("/linux")){
         return NextResponse.redirect(
-            new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/refs/heads/main/src/Installers/Linux/install.sh', request.url)
+            new URL('https://raw.githubusercontent.com/Static-Codes/BrowserAutomationMaster/refs/heads/stable/src/Installers/Linux/install.sh', request.url)
         )
     }
     
